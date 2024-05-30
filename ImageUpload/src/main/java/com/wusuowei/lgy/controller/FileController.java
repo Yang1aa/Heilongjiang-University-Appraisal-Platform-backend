@@ -27,12 +27,23 @@ public class FileController {
 
     @Value("${file.upload.path}")
     private String fileUploadPath;
+    String fileName;
     String modex="";
 
     @PostMapping("/mode")
     public R receiveMode(@RequestParam String mode) {
         // 处理接收到的mode参数
+        JsonController jsonController = new JsonController();
+        XceptionController xceptionController = new XceptionController();
         modex = mode;
+        switch (modex) {
+            case "xception":
+                xceptionController.RunPython(fileName);
+//                    xceptionController.getImage(newFileName);
+            case "neumap_classify":
+                jsonController.write(fileName);
+            default:
+        }
         return R.ok().put("success","ok");
     }
 
@@ -49,6 +60,7 @@ public class FileController {
         String suffixName = originalFilename.substring(originalFilename.lastIndexOf("."));
         String randomFileName = RandomStringUtils.randomAlphanumeric(6);
         String newFileName = randomFileName + suffixName;
+        fileName=newFileName;
         File destinationFile = new File(fileUploadPath, newFileName);
 
 
@@ -60,14 +72,7 @@ public class FileController {
 
         String imageUrl = "http://116.63.15.173:8088/file/" + newFileName;
             // 根据 mode 参数执行相应的逻辑
-            switch (modex) {
-                case "xception":
-                    xceptionController.RunPython(newFileName);
-                    xceptionController.getImage(newFileName);
-                case "neumap_classify":
-                    jsonController.write(newFileName);
-                default:
-            }
+
 
 
         // Return the URL of the uploaded image

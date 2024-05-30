@@ -21,7 +21,7 @@ public class XceptionController {
             Runtime runtime = Runtime.getRuntime();
 
             // 构建命令行命令
-            String pythonCommand = "python3 /root/algorithm/identify/Xception/Xception_test.py /var/www/html/backend/files"+imageName;
+            String pythonCommand = "python3 /root/algorithm/identify/Xception/Xception_test.py /var/www/html/backend/files/"+imageName;
 
             // 执行命令
             Process process = runtime.exec(pythonCommand);
