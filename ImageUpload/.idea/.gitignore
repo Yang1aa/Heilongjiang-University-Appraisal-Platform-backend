@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../:\System\SpringBoot+Vue多图片上传和展示\Heilongjiang-University-Appraisal-Platform-backend\ImageUpload\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

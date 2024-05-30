@@ -1,7 +1,9 @@
+com\wusuowei\lgy\controller\JsonController$FileController.class
 com\wusuowei\lgy\ImageUploadApplication.class
 com\wusuowei\lgy\controller\XceptionController.class
 com\wusuowei\lgy\utils\R.class
 com\wusuowei\lgy\controller\neumap_classifyController.class
+com\wusuowei\lgy\controller\JsonController$FileService.class
 com\wusuowei\lgy\controller\FileController.class
 com\wusuowei\lgy\config\MyWebConfigurer.class
 com\wusuowei\lgy\controller\JsonController.class

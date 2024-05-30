@@ -12,7 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class neumap_classifyController {
-
     @GetMapping("/image")
     public ResponseEntity<Resource> getImage() {
         try {
